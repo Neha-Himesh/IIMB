@@ -12,10 +12,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.nehahimesh.iimb.drawer.AddOrder;
 import com.example.nehahimesh.iimb.drawer.PendingOrder;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener,PendingOrder.OnFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener,PendingOrder.OnFragmentInteractionListener, AddOrder.OnFragmentInteractionListener{
 
     private FragmentManager manager;
 
@@ -43,6 +44,12 @@ public class MainActivity extends AppCompatActivity
         navigationView.getMenu().getItem(0).setChecked(true);
         PendingOrder pendingOrderFragment = new PendingOrder();
         manager.beginTransaction().replace(R.id.content_main_layout,pendingOrderFragment).commit();
+
+
+
+        navigationView.getMenu().getItem(1).setChecked(true);
+        AddOrder addOrderFragment = new AddOrder();
+
     }
 
     @Override
@@ -86,9 +93,21 @@ public class MainActivity extends AppCompatActivity
         //Initialize Fragment Manager
         manager = getFragmentManager();
 
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
         if (id == R.id.nav_pending_order) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+
+            navigationView.getMenu().getItem(0);
+            PendingOrder pendingOrderFragment = new PendingOrder();
+            manager.beginTransaction().replace(R.id.content_main_layout,pendingOrderFragment).commit();
+
+        } else if (id == R.id.nav_add_order) {
+
+            navigationView.getMenu().getItem(1);
+            AddOrder addOrderFragment = new AddOrder();
+            manager.beginTransaction().replace(R.id.content_main_layout,addOrderFragment).commit();
 
         } else if (id == R.id.nav_slideshow) {
 
