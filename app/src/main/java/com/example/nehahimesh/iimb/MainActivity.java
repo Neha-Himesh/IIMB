@@ -12,11 +12,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.nehahimesh.iimb.drawer.AddInventory;
 import com.example.nehahimesh.iimb.drawer.AddOrder;
 import com.example.nehahimesh.iimb.drawer.PendingOrder;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener,PendingOrder.OnFragmentInteractionListener, AddOrder.OnFragmentInteractionListener{
+        implements NavigationView.OnNavigationItemSelectedListener,PendingOrder.OnFragmentInteractionListener, AddOrder.OnFragmentInteractionListener,AddInventory.OnFragmentInteractionListener{
 
     private FragmentManager manager;
 
@@ -49,6 +50,9 @@ public class MainActivity extends AppCompatActivity
 
         navigationView.getMenu().getItem(1).setChecked(true);
         AddOrder addOrderFragment = new AddOrder();
+
+        navigationView.getMenu().getItem(2).setChecked(true);
+        AddInventory addInventoryFragment = new AddInventory();
 
     }
 
@@ -109,7 +113,11 @@ public class MainActivity extends AppCompatActivity
             AddOrder addOrderFragment = new AddOrder();
             manager.beginTransaction().replace(R.id.content_main_layout,addOrderFragment).commit();
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_add_inventory) {
+
+            navigationView.getMenu().getItem(2);
+            AddInventory addInventoryFragment = new AddInventory();
+            manager.beginTransaction().replace(R.id.content_main_layout,addInventoryFragment).commit();
 
         } else if (id == R.id.nav_manage) {
 

@@ -12,7 +12,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.nehahimesh.iimb.drawer.AddOrder">
@@ -24,51 +23,45 @@
         android:id="@+id/imageView2"
         android:layout_width="58dp"
         android:layout_height="48dp"
-        android:layout_marginStart="4dp"
+
         android:layout_marginTop="4dp"
         android:layout_alignParentTop="true"
         android:src="@drawable/iimb2"
 
-         />
+        android:layout_marginLeft="4dp" />
 
     <TextView
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
         android:layout_marginTop="16dp"
-        android:layout_toEndOf="@id/imageView2"
-        android:text="@string/add_order"
+        android:text="Add Order"
         android:textSize="25sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginLeft="28dp"
+        android:layout_toRightOf="@id/imageView2" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
         android:text="@string/sl_no"
-        android:layout_alignParentStart="true"
         android:layout_below="@id/imageView2"
         android:textSize="20sp"
         android:layout_marginTop="12dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        tools:layout_editor_absoluteY="64dp" />
+        tools:layout_editor_absoluteY="64dp"
+        android:layout_marginLeft="28dp" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
         android:text="1"
         android:textSize="20sp"
         android:layout_toRightOf="@id/textView2"
         android:layout_below="@id/editText"
         android:layout_marginTop="12dp"
-        tools:layout_editor_absoluteX="128dp"
-        
-        tools:layout_editor_absoluteY="64dp" />
+        android:layout_marginLeft="28dp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -207,8 +200,25 @@
         android:ems="8"
         android:inputType="number"
         android:textSize="20sp" />
+    <TextView
+        android:id="@+id/id_order_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order details"
+        android:textSize="20sp"
+        android:layout_below="@id/textView10"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="15dp"/>
 
-
+<TableLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/displayLinear"
+    android:layout_below="@id/id_order_details"
+    android:layout_marginLeft="28dp"
+    android:layout_marginTop="20dp">
+    <TableRow></TableRow>
+</TableLayout>
 
     <!--order details-->
 
@@ -218,7 +228,7 @@
         android:layout_height="wrap_content"
         android:text="Due date"
         android:textSize="20sp"
-        android:layout_below="@id/textView10"
+        android:layout_below="@id/displayLinear"
         android:layout_marginLeft="28dp"
         android:layout_marginTop="18dp"
        />
@@ -228,10 +238,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="25/01/2018"
-        android:layout_below="@id/editText5"
+        android:layout_below="@id/displayLinear"
         android:layout_toRightOf="@id/textView11"
         android:layout_marginLeft="28dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="18dp"
         android:textSize="20sp"
          />
 
