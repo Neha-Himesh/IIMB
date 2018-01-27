@@ -12,5 +12,24 @@
     <string name="add_order">Add Order</string>
     <string name="sl_no">Sl. no.</string>
     <string name="add_inventory">add_inventory</string>
+<!-- month spinner-->
+    <string name="month_prompt">Choose a country</string>
+     <string-array name="month_arrays">
+        <item>Week</item>
+        <item>Fortnight</item>
+        <item>Month</item>
+        <item>Quarter</item>
+
+    </string-array>
+    <!--order source spinner-->
+    <string name="order_source_prompt">Choose a country</string>
+
+    <string-array name="order_source_arrays">
+        <item>GoogreenBUG</item>
+        <item>Amazon</item>
+        <item>Retail</item>
+        <item>Other</item>
+
+    </string-array>
 
 </resources>
