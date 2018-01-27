@@ -12,6 +12,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_order_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.nehahimesh.iimb.drawer.AddOrder">
@@ -183,8 +184,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ph. no."
-        android:layout_below="@id/id_adrress"
-        android:layout_marginTop="38dp"
+        android:layout_below="@id/id_address_value"
         android:layout_marginLeft="28dp"
         android:textSize="20sp"
         />
@@ -208,15 +208,24 @@
         android:layout_marginLeft="28dp"
         android:layout_marginTop="15dp"/>
 
-<TableLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/displayLinear"
-    android:layout_below="@id/id_order_details"
-    android:layout_marginLeft="28dp"
-    android:layout_marginTop="20dp">
-    <TableRow></TableRow>
-</TableLayout>
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/table_order_details"
+        android:layout_below="@id/id_order_details"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/round_button"
+        android:text="+"
+
+        android:textColor="@android:color/white"/>
+
+
 
     <!--order details-->
 
@@ -226,7 +235,7 @@
         android:layout_height="wrap_content"
         android:text="Due date"
         android:textSize="20sp"
-        android:layout_below="@id/displayLinear"
+        android:layout_below="@id/table_order_details"
         android:layout_marginLeft="28dp"
         android:layout_marginTop="18dp"
        />
@@ -236,7 +245,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="25/01/2018"
-        android:layout_below="@id/displayLinear"
+        android:layout_below="@id/table_order_details"
         android:layout_toRightOf="@id/id_due_date"
         android:layout_marginLeft="28dp"
         android:layout_marginTop="18dp"
@@ -260,13 +269,13 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/id_complete"
         android:layout_below="@id/id_date"
+        android:orientation="horizontal"
         android:layout_marginTop="8dp">
     <RadioButton
         android:id="@+id/id_complete_yes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Yes"
-
         android:textSize="20sp"
         android:checked="true"
         />

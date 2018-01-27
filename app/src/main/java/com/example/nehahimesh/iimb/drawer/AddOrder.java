@@ -7,6 +7,11 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RelativeLayout;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 
 import com.example.nehahimesh.iimb.R;
 
@@ -65,7 +70,51 @@ public class AddOrder extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_order, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_add_order, container, false);
+
+        //Initialise first row of Order Details
+        final TableLayout orderDetailsLayout = view.findViewById(R.id.table_order_details);
+        TableRow row = new TableRow(getActivity());
+        row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT));
+        EditText sku = new EditText(getActivity());
+        //sku.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        sku.setHint("SKU    ");
+        EditText qty = new EditText(getActivity());
+        //qty.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        qty.setHint("QTY    ");
+        row.addView(sku);
+        row.addView(qty);
+        orderDetailsLayout.addView(row);
+
+
+        //Align + button
+        Button addButton = view.findViewById(R.id.button_add);
+        RelativeLayout.LayoutParams params= (RelativeLayout.LayoutParams) addButton.getLayoutParams();
+        params.addRule(RelativeLayout.BELOW,R.id.id_order_details);
+        params.addRule(RelativeLayout.RIGHT_OF,orderDetailsLayout.getId());
+        addButton.setLayoutParams(params);
+
+
+        //Add new rows on button click
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TableRow row = new TableRow(getActivity());
+                row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT));
+                EditText sku = new EditText(getActivity());
+                //sku.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                sku.setHint("SKU    ");
+                EditText qty = new EditText(getActivity());
+                //qty.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                qty.setHint("QTY    ");
+                row.addView(sku);
+                row.addView(qty);
+                orderDetailsLayout.addView(row);
+            }
+        });
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
