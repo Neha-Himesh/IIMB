@@ -8,4 +8,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pending_order">Pending Order</string>
+    <string name="add_order">Add Order</string>
+    <string name="sl_no">Sl. no.</string>
+    <string name="add_inventory">add_inventory</string>
+
 </resources>

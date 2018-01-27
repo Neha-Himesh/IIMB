@@ -12,10 +12,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.nehahimesh.iimb.drawer.AddInventory;
+import com.example.nehahimesh.iimb.drawer.AddOrder;
 import com.example.nehahimesh.iimb.drawer.PendingOrder;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener,PendingOrder.OnFragmentInteractionListener,Inventory.OnFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener,PendingOrder.OnFragmentInteractionListener, AddOrder.OnFragmentInteractionListener,AddInventory.OnFragmentInteractionListener{
 
     private FragmentManager manager;
 
@@ -40,13 +42,8 @@ public class MainActivity extends AppCompatActivity
         manager = getFragmentManager();
 
         //Set PendingOrder as default
-
         navigationView.getMenu().getItem(0).setChecked(true);
         PendingOrder pendingOrderFragment = new PendingOrder();
-        manager.beginTransaction().replace(R.id.content_main_layout,pendingOrderFragment).commit();
-
-        navigationView.getMenu().getItem(0).setChecked(true);
-        Inventory inventory= new Inventory();
         manager.beginTransaction().replace(R.id.content_main_layout,pendingOrderFragment).commit();
     }
 
@@ -94,23 +91,27 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         if (id == R.id.nav_pending_order) {
-            navigationView.getMenu().getItem(0);
             PendingOrder pendingOrderFragment = new PendingOrder();
             manager.beginTransaction().replace(R.id.content_main_layout,pendingOrderFragment).commit();
 
             // Handle the camera action
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_add_order) {
 
-        } else if (id == R.id.nav_slideshow) {
+            navigationView.getMenu().getItem(1);
+            AddOrder addOrderFragment = new AddOrder();
+            manager.beginTransaction().replace(R.id.content_main_layout,addOrderFragment).commit();
+
+        } else if (id == R.id.nav_add_inventory) {
+
+            navigationView.getMenu().getItem(2);
+            AddInventory addInventoryFragment = new AddInventory();
+            manager.beginTransaction().replace(R.id.content_main_layout,addInventoryFragment).commit();
 
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
-            navigationView.getMenu().getItem(5);
-            Inventory inventory= new Inventory();
-            manager.beginTransaction().replace(R.id.content_main_layout,Inventory).commit();
 
         }
 
