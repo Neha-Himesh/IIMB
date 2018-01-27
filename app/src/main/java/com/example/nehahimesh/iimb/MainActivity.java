@@ -93,20 +93,12 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_pending_order) {
             PendingOrder pendingOrderFragment = new PendingOrder();
             manager.beginTransaction().replace(R.id.content_main_layout,pendingOrderFragment).commit();
-
-            // Handle the camera action
         } else if (id == R.id.nav_add_order) {
-
-            navigationView.getMenu().getItem(1);
             AddOrder addOrderFragment = new AddOrder();
             manager.beginTransaction().replace(R.id.content_main_layout,addOrderFragment).commit();
-
         } else if (id == R.id.nav_add_inventory) {
-
-            navigationView.getMenu().getItem(2);
             AddInventory addInventoryFragment = new AddInventory();
             manager.beginTransaction().replace(R.id.content_main_layout,addInventoryFragment).commit();
-
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {

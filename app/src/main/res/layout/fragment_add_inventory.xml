@@ -1,142 +1,138 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.nehahimesh.iimb.drawer.AddInventory">
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.nehahimesh.iimb.drawer.AddInventory">
 
 
-   <RelativeLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content">
-       <ImageView
-           android:id="@+id/imageView2"
-           android:layout_width="58dp"
-           android:layout_height="48dp"
-           android:layout_marginTop="4dp"
-           android:layout_alignParentTop="true"
-           android:src="@drawable/iimb2"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="58dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/iimb2"
 
-           android:layout_marginStart="4dp"
-           tools:ignore="RtlCompat" />
+                />
 
-    <TextView
-        android:id="@+id/id_add_inventory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Inventory"
-        android:textSize="25sp"
-        android:layout_marginTop="16dp"
-        android:layout_toLeftOf="@id/imageView2"
-        android:layout_marginStart="28dp"
-        tools:ignore="RtlCompat" />
+            <TextView
+                android:id="@+id/id_add_inventory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Inventory"
+                android:textSize="25sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="28dp"
+                android:layout_toEndOf="@id/imageView2"
+                android:layout_toRightOf="@id/imageView2" />
 
-       <TextView
-           android:id="@+id/id_15_wrapper"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="15 wrapper"
-           android:layout_below="@id/imageView2"
-           android:layout_marginTop="28dp"
-           android:textSize="20sp"
-           android:layout_marginStart="28dp"
-           tools:ignore="RtlCompat" />
-       <EditText
-           android:id="@+id/id_edittext1"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_below="@id/id_add_inventory"
-           android:layout_marginTop="18dp"
-           android:hint="1"
-           android:layout_toLeftOf="@id/id_15_wrapper"
-           android:layout_marginStart="28dp"
-           tools:ignore="RtlCompat" />
+            <TextView
+                android:id="@+id/id_15_wrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15 wrapper"
+                android:layout_below="@id/imageView2"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="28dp"
+                android:textSize="20sp"
+                />
+            <EditText
+                android:id="@+id/id_edittext1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_add_inventory"
+                android:layout_marginTop="18dp"
+                android:layout_marginLeft="28dp"
+                android:hint="1"
+                android:layout_toEndOf="@id/id_15_wrapper"
+                android:layout_toRightOf="@id/id_15_wrapper" />
 
-       <TextView
-           android:id="@+id/id_60_wrapper"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="60/75 wrapper"
-           android:layout_below="@id/id_15_wrapper"
-           android:layout_marginTop="15dp"
-           android:textSize="20sp"
-           android:layout_marginStart="28dp"
-           tools:ignore="RtlCompat" />
+            <TextView
+                android:id="@+id/id_60_wrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="60/75 wrapper"
+                android:layout_below="@id/id_15_wrapper"
+                android:layout_marginTop="15dp"
+                android:textSize="20sp"
+                android:layout_marginLeft="28dp" />
 
-       <EditText
-           android:id="@+id/id_edittext2"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_below="@+id/id_15_wrapper"
-           android:layout_toEndOf="@+id/id_edittext1"
-           android:layout_toRightOf="@+id/id_edittext1"
-           android:hint="1" />
+            <EditText
+                android:id="@+id/id_edittext2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/id_15_wrapper"
+                android:layout_toEndOf="@+id/id_edittext1"
+                android:layout_toRightOf="@+id/id_edittext1"
+                android:hint="1" />
 
-       <TextView
-           android:id="@+id/id_75_sticker"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="75 sticker"
-           android:textSize="20sp"
-           android:layout_below="@id/id_60_wrapper"
-           android:layout_marginTop="15dp"
-           android:layout_marginStart="28dp"
-           tools:ignore="RtlCompat" />
-       <EditText
-           android:id="@+id/id_edittext3"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:hint="1"
-           android:layout_below="@id/id_edittext2"
-           android:layout_marginStart="28dp"
-           android:layout_toEndOf="@id/id_75_sticker"
-           tools:ignore="RtlCompat" />
-        <TextView
-            android:id="@+id/id_string_sticker"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="W/String sticker"
-            android:textSize="20sp"
-            android:layout_below="@id/id_75_sticker"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginLeft="28dp" />
+            <TextView
+                android:id="@+id/id_75_sticker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="75 sticker"
+                android:textSize="20sp"
+                android:layout_below="@id/id_60_wrapper"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="15dp"
+                />
+            <EditText
+                android:id="@+id/id_edittext3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="1"
+                android:layout_below="@id/id_edittext2"
+                android:layout_marginLeft="28dp"
+                android:layout_toRightOf="@id/id_75_sticker" />
+            <TextView
+                android:id="@+id/id_string_sticker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="W/String sticker"
+                android:textSize="20sp"
+                android:layout_below="@id/id_75_sticker"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="15dp"
 
-       <EditText
-           android:id="@+id/id_edittext4"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:hint="1"
-           android:layout_below="@id/id_edittext3"
-           android:layout_toEndOf="@id/id_string_sticker"
-           android:layout_marginStart="28dp"
-           tools:ignore="RtlCompat" />
+                />
+            <EditText
+                android:id="@+id/id_edittext4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="1"
+                android:layout_toRightOf="@id/id_string_sticker"
+                android:layout_marginLeft="28dp"
+                android:layout_below="@id/id_edittext3"
+                />
 
-       <TextView
-           android:id="@+id/id_soroptimist_sticker"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:textSize="20sp"
-           android:text="Soroptimist sticker"
-           android:layout_below="@id/id_string_sticker"
-           android:layout_marginTop="15dp"
-           android:layout_marginStart="28dp"
-           tools:ignore="RtlCompat" />
-       <EditText
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_below="@id/id_edittext4"
-           android:hint="1"
-           android:layout_marginStart="28dp"
-           android:layout_toEndOf="@id/id_soroptimist_sticker"
-           tools:ignore="RtlCompat" />
+            <TextView
+                android:id="@+id/id_soroptimist_sticker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Soroptimist sticker"
+                android:layout_below="@id/id_string_sticker"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="15dp"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_edittext4"
+                android:layout_marginLeft="28dp"
+                android:hint="1"
+                android:layout_toRightOf="@id/id_soroptimist_sticker"/>
 
-   </RelativeLayout>
+        </RelativeLayout>
 
-</FrameLayout>
+    </FrameLayout>
 </ScrollView>
