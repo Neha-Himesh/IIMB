@@ -23,7 +23,7 @@
             android:textColor="#2C662E"
             android:layout_toEndOf="@id/iimb2"
             android:layout_below="@id/iimb2"
-            android:paddingBottom="20dp"
+            android:layout_marginBottom="20dp"
             tools:ignore="RtlCompat" />
 
         <TextView
@@ -32,53 +32,68 @@
             android:layout_height="wrap_content"
             android:text="Jan 2018"
             android:textSize="24sp"
+            android:textColor="#2C662E"
             android:layout_toEndOf="@id/sales"
             android:layout_below="@id/iimb2"
-            android:paddingLeft="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginLeft="20dp"
+            tools:ignore="RtlCompat" />
+        <TextView
+            android:id="@+id/rs."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs."
+            android:textSize="32sp"
+            android:textColor="#A63716"
+            android:layout_below="@id/sales"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="10dp"
             tools:ignore="RtlCompat" />
         <TextView
             android:id="@+id/amount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Rs.10,000"
-            android:textSize="32sp"
-            android:background="#C3FF80"
-            android:layout_toEndOf="@id/iimb2"
-            android:layout_below="@id/sales"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginRight="10dp"
-            tools:ignore="RtlCompat" />
-
-
-        <TextView
-            android:id="@+id/number"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="15"
+            android:text="10,000"
             android:textSize="32sp"
             android:background="#FFCC80"
-            android:layout_toEndOf="@id/amount"
             android:layout_below="@id/sales"
+            android:layout_toRightOf="@id/rs."
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:layout_marginBottom="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="5dp"
             tools:ignore="RtlCompat" />
 
         <TextView
             android:id="@+id/eq"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="EQ"
-            android:textSize="32sp"
+            android:text="15EQ"
+            android:textSize="28sp"
             android:textColor="#A63716"
-            android:layout_toEndOf="@id/number"
             android:layout_below="@id/sales"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:layout_marginBottom="20dp"
-            android:layout_marginLeft="0dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"/>
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="470"
+            android:textSize="32sp"
+            android:background="#FFCC80"
+            android:layout_toLeftOf="@id/eq"
+            android:layout_below="@id/sales"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:layout_marginBottom="20dp"
             tools:ignore="RtlCompat" />
 
         <TextView
@@ -100,34 +115,35 @@
             android:layout_below="@id/pending_orders"
             android:layout_marginLeft="20dp"
             android:paddingBottom="20dp"/>
-        <TextView
-            android:id="@+id/go1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="06"
-            android:textSize="32sp"
-            android:background="#FFCC80"
-            android:layout_toEndOf="@id/gogreenbug"
-            android:layout_below="@id/pending_orders"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="70dp"
 
-            tools:ignore="RtlCompat" />
         <TextView
             android:id="@+id/go2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="15"
             android:textSize="32sp"
-            android:background="#FFCC80"
-            android:layout_toEndOf="@id/go1"
+            android:background="#C3FF80"
             android:layout_below="@id/pending_orders"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:layout_marginBottom="20dp"
-            android:layout_marginLeft="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="37dp"
+
+            tools:ignore="RtlCompat" />
+        <TextView
+            android:id="@+id/go1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="06"
+            android:textSize="32sp"
+            android:background="#C3FF80"
+            android:layout_below="@id/pending_orders"
+            android:layout_toLeftOf="@id/go2"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginRight="10dp"
+
             tools:ignore="RtlCompat" />
         <TextView
             android:id="@+id/amazon"
@@ -138,34 +154,32 @@
             android:layout_below="@id/gogreenbug"
             android:layout_marginLeft="20dp"
             android:paddingBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/am2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="05"
+            android:textSize="32sp"
+            android:background="#C3FF80"
+            android:layout_below="@id/gogreenbug"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="37dp"
+            tools:ignore="RtlCompat" />
         <TextView
             android:id="@+id/am1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="10"
             android:textSize="32sp"
-            android:background="#FFCC80"
-            android:layout_toEndOf="@id/amazon"
+            android:background="#C3FF80"
+            android:layout_toLeftOf="@id/am2"
             android:layout_below="@id/gogreenbug"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="116dp"
-            tools:ignore="RtlCompat" />
-
-        <TextView
-            android:id="@+id/am2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="15"
-            android:textSize="32sp"
-            android:background="#FFCC80"
-            android:layout_toEndOf="@id/am1"
-            android:layout_below="@id/gogreenbug"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"
             tools:ignore="RtlCompat" />
 
         <TextView
@@ -178,32 +192,30 @@
             android:layout_marginLeft="20dp"
             android:paddingBottom="20dp"/>
         <TextView
-            android:id="@+id/rt1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="15"
-            android:textSize="32sp"
-            android:background="#FFCC80"
-            android:layout_toRightOf="@id/retail"
-            android:layout_below="@id/amazon"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="145dp"/>
-        <TextView
             android:id="@+id/rt2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="15"
             android:textSize="32sp"
-            android:background="#FFCC80"
-            android:layout_toEndOf="@id/rt1"
+            android:background="#C3FF80"
             android:layout_below="@id/amazon"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="37dp"
             tools:ignore="RtlCompat" />
+        <TextView
+            android:id="@+id/rt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12"
+            android:textSize="32sp"
+            android:background="#C3FF80"
+            android:layout_toLeftOf="@id/rt2"
+            android:layout_below="@id/amazon"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginRight="10dp"/>
         <TextView
             android:id="@+id/others"
             android:layout_width="wrap_content"
@@ -213,33 +225,33 @@
             android:layout_below="@id/retail"
             android:layout_marginLeft="20dp"
             android:paddingBottom="30dp"/>
-        <TextView
-            android:id="@+id/ot1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="15"
-            android:textSize="32sp"
-            android:background="#FFCC80"
-            android:layout_toEndOf="@id/others"
-            android:layout_below="@id/retail"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="134dp"
-            tools:ignore="RtlCompat" />
+
+
         <TextView
             android:id="@+id/ot2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="15"
             android:textSize="32sp"
-            android:background="#FFCC80"
-            android:layout_toEndOf="@id/ot1"
+            android:background="#C3FF80"
             android:layout_below="@id/retail"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="37dp"
+            tools:ignore="RtlCompat" />
+        <TextView
+            android:id="@+id/ot1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="08"
+            android:textSize="32sp"
+            android:background="#C3FF80"
+            android:layout_toLeftOf="@id/ot2"
+            android:layout_below="@id/retail"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginRight="10dp"
             tools:ignore="RtlCompat" />
         <TextView
             android:id="@+id/Bags"
@@ -261,7 +273,7 @@
             android:layout_below="@id/others"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"
             android:background="#FFCC80"
             tools:ignore="RtlCompat" />
         <TextView
@@ -279,12 +291,12 @@
             android:layout_height="wrap_content"
             android:text="5400"
             android:textSize="32sp"
-            android:background="#C3FF80"
+            android:background="#FFCC80"
             android:layout_alignParentRight="true"
             android:layout_below="@id/Bags"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"
             tools:ignore="RtlCompat" />
 
 
