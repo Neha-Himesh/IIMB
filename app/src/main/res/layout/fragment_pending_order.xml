@@ -1,13 +1,300 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.nehahimesh.iimb.drawer.PendingOrder">
+    android:fillViewport="true">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.nehahimesh.iimb.drawer.PendingOrder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/iimb2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/iimb2"/>
+    <TextView
+         android:id="@+id/sales"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Sales"
+         android:textSize="24sp"
+         android:textColor="#2C662E"
+         android:layout_toEndOf="@id/iimb2"
+         android:layout_below="@id/iimb2"
+         android:paddingBottom="20dp"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/current_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jan 2018"
+        android:textSize="24sp"
+        android:layout_toEndOf="@id/sales"
+        android:layout_below="@id/iimb2"
+        android:paddingLeft="40dp"
+        tools:ignore="RtlCompat" />
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rs.10,000"
+        android:textSize="32sp"
+        android:background="#C3FF80"
+        android:layout_toEndOf="@id/iimb2"
+        android:layout_below="@id/sales"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="10dp"
+        tools:ignore="RtlCompat" />
+
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15"
+        android:textSize="32sp"
+        android:background="#FFCC80"
+        android:layout_toEndOf="@id/amount"
+        android:layout_below="@id/sales"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="20dp"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/eq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EQ"
+        android:textSize="32sp"
+        android:textColor="#A63716"
+        android:layout_toEndOf="@id/number"
+        android:layout_below="@id/sales"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="0dp"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/pending_orders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pending Orders"
+        android:textSize="24sp"
+        android:textColor="#2C662E"
+        android:layout_below="@id/number"
+        android:layout_marginLeft="20dp"
+        android:paddingBottom="20dp"/>
+    <TextView
+        android:id="@+id/gogreenbug"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GoGreenBug"
+        android:textSize="24sp"
+        android:layout_below="@id/pending_orders"
+        android:layout_marginLeft="20dp"
+        android:paddingBottom="20dp"/>
+    <TextView
+        android:id="@+id/go1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="06"
+        android:textSize="32sp"
+        android:background="#FFCC80"
+        android:layout_toEndOf="@id/gogreenbug"
+        android:layout_below="@id/pending_orders"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="70dp"
+        tools:ignore="RtlCompat" />
+    <TextView
+        android:id="@+id/go2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15"
+        android:textSize="32sp"
+        android:background="#FFCC80"
+        android:layout_toEndOf="@id/go1"
+        android:layout_below="@id/pending_orders"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="15dp"
+        tools:ignore="RtlCompat" />
+    <TextView
+        android:id="@+id/am1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="10"
+        android:textSize="32sp"
+        android:background="#FFCC80"
+        android:layout_toEndOf="@id/amazon"
+        android:layout_below="@id/gogreenbug"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="116dp"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/am2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15"
+        android:textSize="32sp"
+        android:background="#FFCC80"
+        android:layout_toEndOf="@id/am1"
+        android:layout_below="@id/gogreenbug"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="12dp"
+        tools:ignore="RtlCompat" />
+    <TextView
+        android:id="@+id/amazon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amazon"
+        android:textSize="24sp"
+        android:layout_below="@id/gogreenbug"
+        android:layout_marginLeft="20dp"
+        android:paddingBottom="20dp"/>
+    <TextView
+        android:id="@+id/retail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retail"
+        android:textSize="24sp"
+        android:layout_below="@id/amazon"
+        android:layout_marginLeft="20dp"
+        android:paddingBottom="20dp"/>
+    <TextView
+        android:id="@+id/rt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15"
+        android:textSize="32sp"
+        android:background="#FFCC80"
+        android:layout_toRightOf="@id/retail"
+        android:layout_below="@id/amazon"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="145dp"/>
+    <TextView
+        android:id="@+id/rt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15"
+        android:textSize="32sp"
+        android:background="#FFCC80"
+        android:layout_toEndOf="@id/rt1"
+        android:layout_below="@id/amazon"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        tools:ignore="RtlCompat" />
+    <TextView
+        android:id="@+id/others"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Others"
+        android:textSize="24sp"
+        android:layout_below="@id/retail"
+        android:layout_marginLeft="20dp"
+        android:paddingBottom="30dp"/>
+    <TextView
+        android:id="@+id/ot1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15"
+        android:textSize="32sp"
+        android:background="#FFCC80"
+        android:layout_toEndOf="@id/others"
+        android:layout_below="@id/retail"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="134dp"
+        tools:ignore="RtlCompat" />
+    <TextView
+        android:id="@+id/ot2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15"
+        android:textSize="32sp"
+        android:background="#FFCC80"
+        android:layout_toEndOf="@id/ot1"
+        android:layout_below="@id/retail"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        tools:ignore="RtlCompat" />
+    <TextView
+        android:id="@+id/Bags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bags in stock"
+        android:textSize="24sp"
+        android:textColor="#2C662E"
+        android:layout_below="@id/others"
+        android:layout_marginLeft="20dp"
+        android:paddingBottom="20dp"/>
+    <TextView
+        android:id="@+id/stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4750"
+        android:textSize="32sp"
+        android:layout_toEndOf="@id/Bags"
+        android:layout_below="@id/others"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="88dp"
+        android:background="#FFCC80"
+        tools:ignore="RtlCompat" />
+    <TextView
+        android:id="@+id/requiredbags"
+        android:layout_width="190dp"
+        android:layout_height="70dp"
+        android:text="Required Bags for Pending Orders"
+        android:textSize="24sp"
+        android:textColor="#2C662E"
+        android:layout_below="@id/Bags"
+        android:layout_marginLeft="20dp" />
+    <TextView
+        android:id="@+id/required"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5400"
+        android:textSize="32sp"
+        android:background="#C3FF80"
+        android:layout_toEndOf="@id/requiredbags"
+        android:layout_below="@id/Bags"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="40dp"
+        tools:ignore="RtlCompat" />
+
+
+    </RelativeLayout>
+
+  </FrameLayout>
+</ScrollView>

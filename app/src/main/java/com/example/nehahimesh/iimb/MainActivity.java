@@ -15,7 +15,7 @@ import android.view.MenuItem;
 import com.example.nehahimesh.iimb.drawer.PendingOrder;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener,PendingOrder.OnFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener,PendingOrder.OnFragmentInteractionListener,Inventory.OnFragmentInteractionListener {
 
     private FragmentManager manager;
 
@@ -40,8 +40,13 @@ public class MainActivity extends AppCompatActivity
         manager = getFragmentManager();
 
         //Set PendingOrder as default
+
         navigationView.getMenu().getItem(0).setChecked(true);
         PendingOrder pendingOrderFragment = new PendingOrder();
+        manager.beginTransaction().replace(R.id.content_main_layout,pendingOrderFragment).commit();
+
+        navigationView.getMenu().getItem(0).setChecked(true);
+        Inventory inventory= new Inventory();
         manager.beginTransaction().replace(R.id.content_main_layout,pendingOrderFragment).commit();
     }
 
@@ -85,10 +90,16 @@ public class MainActivity extends AppCompatActivity
 
         //Initialize Fragment Manager
         manager = getFragmentManager();
+        NavigationView navigationView=(NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
 
         if (id == R.id.nav_pending_order) {
+            navigationView.getMenu().getItem(0);
+            PendingOrder pendingOrderFragment = new PendingOrder();
+            manager.beginTransaction().replace(R.id.content_main_layout,pendingOrderFragment).commit();
+
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_slideshow) {
 
@@ -97,6 +108,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
+            navigationView.getMenu().getItem(5);
+            Inventory inventory= new Inventory();
+            manager.beginTransaction().replace(R.id.content_main_layout,Inventory).commit();
 
         }
 

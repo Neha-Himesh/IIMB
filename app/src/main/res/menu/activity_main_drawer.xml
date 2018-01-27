@@ -5,11 +5,11 @@
         <item
             android:id="@+id/nav_pending_order"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:title="Pending Order" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:title="Add Inventory" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
