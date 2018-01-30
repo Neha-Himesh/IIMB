@@ -12,8 +12,13 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
+import android.widget.TextView;
 
 import com.example.nehahimesh.iimb.R;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -71,7 +76,7 @@ public class AddOrder extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View view = inflater.inflate(R.layout.fragment_add_order, container, false);
+        final View view = inflater.inflate(R.layout.fragment_add_order, container, false);
 
         //Initialise first row of Order Details
         final TableLayout orderDetailsLayout = view.findViewById(R.id.table_order_details);
@@ -113,6 +118,22 @@ public class AddOrder extends Fragment {
                 orderDetailsLayout.addView(row);
             }
         });
+
+        //Sample Database access method
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        database.getReference().child("A").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                TextView slNo = view.findViewById(R.id.id_1);
+                slNo.setText(dataSnapshot.getValue().toString());
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
 
         return view;
     }
