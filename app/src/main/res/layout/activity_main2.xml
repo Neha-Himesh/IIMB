@@ -44,26 +44,400 @@ tools:context="com.example.nehahimesh.iimb.drawer.AddOrder">>
         android:textSize="20sp"
         />
     <TextView
+        android:id="@+id/month"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/month_spinner"
         android:layout_below="@id/id_sales"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="28dp"
-        android:text="Jan 2018"
+        android:text="Jan "
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_sales"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="28dp"
+        android:text="2018 "
+        android:layout_toRightOf="@id/month"
         android:textSize="20sp"
         />
 
 
+    <TextView
+        android:id="@+id/rs."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rs."
+        android:textSize="20sp"
+        android:layout_below="@id/month_spinner"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="28dp"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10,000"
+        android:textSize="20sp"
+        android:background="#FFCC80"
+        android:layout_below="@id/month_spinner"
+        android:layout_toRightOf="@id/rs."
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="15dp"
+        tools:ignore="RtlCompat" />
 
 
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="470"
+        android:textSize="20sp"
+        android:background="#FFCC80"
+        android:layout_toEndOf="@id/amount"
+        android:layout_below="@id/month_spinner"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="28dp"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/eq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15EQ"
+        android:textSize="20sp"
+        android:textColor="#A63716"
+        android:layout_toEndOf="@id/number"
+        android:layout_below="@id/month_spinner"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="28dp"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/gogreenbug"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/go1"
+        android:layout_alignBottom="@+id/go1"
+        android:layout_alignLeft="@+id/amazon"
+        android:layout_alignStart="@+id/amazon"
+        android:layout_marginTop="15dp"
+        android:text="GoGreenBug"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/go2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="130"
+        android:textSize="20sp"
+        android:background="#C3FF80"
+        android:layout_below="@id/rs."
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="37dp"
+
+        tools:ignore="RtlCompat" />
+    <TextView
+        android:id="@+id/go1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10,470"
+        android:textSize="20sp"
+        android:background="#C3FF80"
+        android:layout_below="@id/rs."
+        android:layout_toLeftOf="@id/go2"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        tools:ignore="RtlCompat" />
+    <TextView
+        android:id="@+id/amazon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amazon"
+        android:textSize="20sp"
+        android:layout_below="@id/gogreenbug"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/am2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="145"
+        android:textSize="20sp"
+        android:background="#C3FF80"
+        android:layout_below="@id/gogreenbug"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="37dp"
+        android:layout_marginTop="15dp"
+        tools:ignore="RtlCompat" />
+    <TextView
+        android:id="@+id/am1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11,000"
+        android:textSize="20sp"
+        android:background="#C3FF80"
+        android:layout_toLeftOf="@id/am2"
+        android:layout_below="@id/gogreenbug"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/retail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retail"
+        android:textSize="20sp"
+        android:layout_below="@id/amazon"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="15dp"/>
+    <TextView
+        android:id="@+id/rt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="175"
+        android:textSize="20sp"
+        android:background="#C3FF80"
+        android:layout_below="@id/amazon"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="37dp"
+        tools:ignore="RtlCompat"
+        android:layout_marginTop="15dp"/>
+    <TextView
+        android:id="@+id/rt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="13000"
+        android:textSize="20sp"
+        android:background="#C3FF80"
+        android:layout_toLeftOf="@id/rt2"
+        android:layout_below="@id/amazon"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"/>
+    <TextView
+        android:id="@+id/others"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Others"
+        android:textSize="20sp"
+        android:layout_below="@id/retail"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="15dp"
+        />
 
 
+    <TextView
+        android:id="@+id/ot2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20"
+        android:textSize="20sp"
+        android:background="#C3FF80"
+        android:layout_below="@id/retail"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:ems="2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="37dp"
+        android:layout_marginTop="15dp"
+        tools:ignore="RtlCompat" />
+    <TextView
+        android:id="@+id/ot1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1000"
+        android:textSize="20sp"
+        android:background="#C3FF80"
+        android:layout_toLeftOf="@id/ot2"
+        android:layout_below="@id/retail"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        tools:ignore="RtlCompat" />
+    <TextView
+        android:id="@+id/pending_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="28dp"
+        android:text="Pending Payment"
+        android:textSize="25sp"
+        android:layout_below="@id/others"/>
+    <TextView
+        android:id="@+id/id_instamojo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="15dp"
+        android:text="Instamojo"
+        android:layout_below="@id/pending_payment"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/id_instamojo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pending_payment"
+        android:text="200"
+        android:textSize="20sp"
+        android:background="#C3FF80"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="37dp"
+        android:layout_marginTop="15dp"
+        tools:ignore="RtlCompat" />
+    <TextView
+        android:id="@+id/id_instamojo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1000"
+        android:textSize="20sp"
+        android:background="#C3FF80"
+        android:layout_toLeftOf="@id/id_instamojo1"
+        android:layout_below="@id/pending_payment"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        tools:ignore="RtlCompat" />
+    <TextView
+        android:id="@+id/id_amazon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="15dp"
+        android:text="Amazon"
+        android:layout_below="@id/id_instamojo"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/id_amazon1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_instamojo"
+        android:text="200"
+        android:textSize="20sp"
+        android:background="#C3FF80"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="37dp"
+        android:layout_marginTop="15dp"
+        tools:ignore="RtlCompat" />
+    <TextView
+        android:id="@+id/id_amazon2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1000"
+        android:textSize="20sp"
+        android:background="#C3FF80"
+        android:layout_toLeftOf="@id/id_amazon1"
+        android:layout_below="@id/id_instamojo"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        tools:ignore="RtlCompat" />
 
-
-
-
-
+    <TextView
+        android:id="@+id/id_retail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="15dp"
+        android:text="Retail"
+        android:layout_below="@id/id_amazon"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/id_retail1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_amazon"
+        android:text="200"
+        android:textSize="20sp"
+        android:background="#C3FF80"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="37dp"
+        android:layout_marginTop="15dp"
+        tools:ignore="RtlCompat" />
+    <TextView
+        android:id="@+id/id_retail2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1000"
+        android:textSize="20sp"
+        android:background="#C3FF80"
+        android:layout_toLeftOf="@id/id_retail1"
+        android:layout_below="@id/id_amazon"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        tools:ignore="RtlCompat" />
+    <TextView
+        android:id="@+id/id_others"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="15dp"
+        android:text="Others"
+        android:layout_below="@id/id_retail"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/id_others1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_retail"
+        android:text="200"
+        android:textSize="20sp"
+        android:background="#C3FF80"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="37dp"
+        android:layout_marginTop="15dp"
+        tools:ignore="RtlCompat" />
+    <TextView
+        android:id="@+id/id_others2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1000"
+        android:textSize="20sp"
+        android:background="#C3FF80"
+        android:layout_toLeftOf="@id/id_others1"
+        android:layout_below="@id/id_retail"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        tools:ignore="RtlCompat" />
 
 </RelativeLayout>
 </ScrollView>

@@ -33,12 +33,15 @@
             android:text="Jan 2018"
             android:textSize="24sp"
             android:textColor="#2C662E"
-            android:layout_toEndOf="@id/sales"
+            android:layout_toRightOf="@id/sales"
+            android:clickable="true"
+            android:onClick="init"
             android:layout_below="@id/iimb2"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
+
             android:layout_marginLeft="20dp"
-            tools:ignore="RtlCompat" />
+    />
         <TextView
             android:id="@+id/rs."
             android:layout_width="wrap_content"
@@ -274,6 +277,8 @@
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:layout_marginRight="20dp"
+            android:clickable="true"
+            android:onClick="init1"
             android:background="#FFCC80"
             tools:ignore="RtlCompat" />
         <TextView

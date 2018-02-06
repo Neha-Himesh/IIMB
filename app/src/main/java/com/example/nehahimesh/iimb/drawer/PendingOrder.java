@@ -1,13 +1,18 @@
 package com.example.nehahimesh.iimb.drawer;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.example.nehahimesh.iimb.Main2Activity;
+import com.example.nehahimesh.iimb.Main4Activity;
+import com.example.nehahimesh.iimb.MainActivity;
 import com.example.nehahimesh.iimb.R;
 
 /**
@@ -65,8 +70,31 @@ public class PendingOrder extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pending_order, container, false);
+        View view= inflater.inflate(R.layout.fragment_pending_order, container, false);
+        TextView current_month=(TextView)view.findViewById(R.id.current_month);
+        current_month.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toy=new Intent(getActivity(),Main2Activity.class);
+
+                startActivity(toy);
+            }
+        });
+
+
+        TextView  stock=(TextView)view.findViewById(R.id.stock);
+        stock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toy1=new Intent(getActivity(),Main4Activity.class);
+
+                startActivity(toy1);
+            }
+        });
+
+        return view;
     }
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {

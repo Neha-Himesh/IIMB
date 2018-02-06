@@ -1,6 +1,7 @@
 package com.example.nehahimesh.iimb;
 
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -11,13 +12,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.nehahimesh.iimb.drawer.AddInventory;
 import com.example.nehahimesh.iimb.drawer.AddOrder;
 import com.example.nehahimesh.iimb.drawer.PendingOrder;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.IgnoreExtraProperties;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,PendingOrder.OnFragmentInteractionListener, AddOrder.OnFragmentInteractionListener,AddInventory.OnFragmentInteractionListener{
+
+        private EditText mFirebaseEt;
+
+        private DatabaseReference mDatabase;
 
     private FragmentManager manager;
 
@@ -25,6 +36,22 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
+       /* mFirebaseEt = (EditText)findViewById(R.id.id_order_number_value);
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
+        mFirebaseEt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mDatabase.child()
+
+            }
+        });*/
+
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -45,6 +72,8 @@ public class MainActivity extends AppCompatActivity
         navigationView.getMenu().getItem(0).setChecked(true);
         PendingOrder pendingOrderFragment = new PendingOrder();
         manager.beginTransaction().replace(R.id.content_main_layout,pendingOrderFragment).commit();
+
+
     }
 
     @Override
@@ -116,4 +145,6 @@ public class MainActivity extends AppCompatActivity
     public void onFragmentInteraction(Uri uri) {
 
     }
+
+
 }

@@ -20,6 +20,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Date;
+
+
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
@@ -134,7 +137,7 @@ public class AddOrder extends Fragment {
             }
         });
 
-
+        Order order=new Order("1","01-Jan-2018","gogreenbug","1", "stringed",5, "3-Jan-2018","complete","2-Jan-2018");
         return view;
     }
 

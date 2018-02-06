@@ -1,0 +1,181 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iimb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/iimb2"/>
+
+        <TextView
+            android:id="@+id/id_bags_in_stock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Bags in stock"
+            android:textSize="25sp"
+            android:layout_marginLeft="28dp"
+            android:layout_below="@id/iimb2"/>
+        <TextView
+            android:id="@+id/id_bags_in_stock_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="2500"
+            android:textSize="25sp"
+            android:layout_marginLeft="28dp"
+            android:layout_below="@id/iimb2"
+            android:layout_toRightOf="@id/id_bags_in_stock"/>
+
+
+        <TextView
+            android:id="@+id/id_75r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="28dp"
+            android:layout_below="@id/id_bags_in_stock"
+            android:text="75R"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/id_75r_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="28dp"
+            android:layout_below="@id/id_bags_in_stock"
+            android:text="250"
+            android:textSize="20sp"
+            android:layout_toRightOf="@id/id_75r"
+            />
+
+        <TextView
+            android:id="@+id/id_60r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="28dp"
+            android:layout_below="@id/id_75r"
+            android:text="60R"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/id_60r_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="28dp"
+            android:layout_below="@id/id_75r"
+            android:text="250"
+            android:textSize="20sp"
+            android:layout_toRightOf="@id/id_60r"
+            />
+
+        <TextView
+            android:id="@+id/id_60t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="28dp"
+            android:layout_below="@id/id_60r"
+            android:text="60T"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/id_60t_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="28dp"
+            android:layout_below="@id/id_60r"
+            android:text="250"
+            android:textSize="20sp"
+            android:layout_toRightOf="@id/id_60t"
+            />
+
+        <TextView
+            android:id="@+id/id_15r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="28dp"
+            android:layout_below="@id/id_60t"
+            android:text="15R"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/id_15r_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="28dp"
+            android:layout_below="@id/id_60t"
+            android:text="250"
+            android:textSize="20sp"
+            android:layout_toRightOf="@id/id_15r"
+            />
+
+        <TextView
+            android:id="@+id/id_15t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="28dp"
+            android:layout_below="@id/id_15r"
+            android:text="15T"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/id_15t_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="28dp"
+            android:layout_below="@id/id_15r"
+            android:text="250"
+            android:textSize="20sp"
+            android:layout_toRightOf="@id/id_15t"
+            />
+
+        <TextView
+            android:id="@+id/id_loose_pieces"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="28dp"
+            android:layout_below="@id/id_15t"
+            android:text="Loose pieces"
+            android:textSize="20sp"
+            />
+
+
+        <TextView
+            android:id="@+id/id_loose_pieces_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="28dp"
+            android:layout_below="@id/id_15t"
+            android:text="250"
+            android:textSize="20sp"
+            android:layout_toRightOf="@id/id_loose_pieces"
+            />
+
+
+
+    </RelativeLayout>
+
+</ScrollView>
